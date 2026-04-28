@@ -32,6 +32,7 @@ img {
 .about__blocks,
 .block__items,
 .block__folowing,
+.conditions,
 .footer__block {
   width: min(100%, 75rem);
   margin-left: auto;
@@ -241,6 +242,33 @@ img {
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
+.conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 6rem;
+}
+
+.p__conditions {
+  margin: 0;
+}
+
+.conditions__image {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.conditions__img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  justify-self: center;
+  border-radius: 0.5rem;
+  object-fit: contain;
+}
+
 .footer {
   margin-top: 20px;
   padding: 4rem 3rem;
@@ -306,7 +334,8 @@ img {
   }
 
   .block__items,
-  .block__folowing {
+  .block__folowing,
+  .conditions {
     margin-top: 4.5rem;
   }
 
@@ -364,6 +393,14 @@ img {
 
   .block__folowing {
     align-items: flex-start;
+  }
+
+  .conditions {
+    gap: 1.25rem;
+  }
+
+  .conditions__image {
+    gap: 1.25rem;
   }
 
   .footer {
@@ -458,6 +495,15 @@ img {
 
   .h1__folowing {
     font-size: 1.75rem;
+  }
+
+  .conditions {
+    gap: 1rem;
+  }
+
+  .conditions__image {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .footer {
