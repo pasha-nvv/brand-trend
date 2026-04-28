@@ -254,17 +254,15 @@ img {
 }
 
 .conditions__image {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-  gap: 1.5rem;
-  align-items: start;
+  display: flex;
+  justify-content: flex-start;
+  width: min(100%, 32rem);
+  margin: 0;
 }
 
 .conditions__img {
   width: 100%;
-  max-width: 100%;
   height: auto;
-  justify-self: center;
   border-radius: 0.5rem;
   object-fit: contain;
 }
@@ -400,7 +398,7 @@ img {
   }
 
   .conditions__image {
-    gap: 1.25rem;
+    width: min(100%, 26rem);
   }
 
   .footer {
@@ -502,8 +500,7 @@ img {
   }
 
   .conditions__image {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    width: min(100%, 20rem);
   }
 
   .footer {
