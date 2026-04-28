@@ -1,6 +1,5 @@
 import './../../../App.css';
 import Conditions__One from '../../../assets/Conditions/conditions-one.jpg';
-import Conditions__Two from '../../../assets/Conditions/conditions-two.jpg';
 
 const Conditions = () => {
   return (
@@ -13,11 +12,6 @@ const Conditions = () => {
           src={Conditions__One}
           className='conditions__img'
           alt='Conditions one page'
-        />
-        <img
-          src={Conditions__Two}
-          className='conditions__img'
-          alt='Conditions two page'
         />
       </div>
     </div>
