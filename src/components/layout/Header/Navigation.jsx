@@ -4,7 +4,6 @@ const Navigation = () => {
   return (
     <nav className='nav__header'>
       <a href="#about" className='link__header'>ABOUT</a>
-      <a href="#collection" className='link__header'>COLLECTION</a>
       <a href="#contact" className='link__header'>CONTACT</a>
     </nav>
   )
