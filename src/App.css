@@ -29,12 +29,18 @@ img {
 
 .header,
 .block__one,
-.about__blocks,
-.block__items,
-.block__folowing,
-.conditions,
 .footer__block {
   width: min(100%, 75rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.promo__blocks,
+.block__items,
+.block__items__header,
+.block__folowing,
+.conditions {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -109,7 +115,7 @@ img {
   padding: 1.25rem 3rem 0;
 }
 
-.about__blocks {
+.promo__blocks {
   display: flex;
   gap: 1.5rem;
 }
@@ -155,7 +161,12 @@ img {
 }
 
 .block__items {
+  width: 100%;
   margin-top: 6rem;
+}
+
+.block__items__header {
+  width: 100%;
 }
 
 .title__block {
@@ -178,11 +189,56 @@ img {
   white-space: nowrap;
 }
 
-.products__blocks {
+.about__blocks {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: stretch;
   gap: 1.5rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thankyou__blocks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.5rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reserving__blocks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.5rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__info,
+.thankyou__info,
+.reserving__info {
+  flex: 1 1 calc(25% - 1.125rem);
+  min-width: 0;
+  margin: 0;
+  padding: 1.75rem;
+  border: 1px solid #ece8e1;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 1.25rem 2.75rem rgba(34, 24, 18, 0.12);
+  line-height: 1.65;
+}
+
+.thankyou__info {
+  flex-basis: calc(50% - 0.75rem);
+}
+
+.reserving__info {
+  flex-basis: calc(50% - 0.75rem);
 }
 
 .block__item {
@@ -198,15 +254,6 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
-}
-
-.img__products {
-  width: 100%;
-  min-width: 0;
-  max-width: 100%;
-  max-height: none;
-  aspect-ratio: 5 / 7;
-  object-fit: cover;
 }
 
 .p__products {
@@ -255,13 +302,17 @@ img {
 
 .conditions__image {
   display: flex;
-  justify-content: flex-start;
-  width: min(100%, 32rem);
-  margin: 0;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: min(100%, 54rem);
+  margin: 0 auto 0 0;
+  gap: 1rem 1.5rem;
 }
 
 .conditions__img {
-  width: 100%;
+  flex: 1 1 calc(50% - 0.75rem);
+  width: calc(50% - 0.75rem);
+  min-width: 0;
   height: auto;
   border-radius: 0.5rem;
   object-fit: contain;
@@ -321,7 +372,7 @@ img {
     padding: 1.25rem 2rem 0;
   }
 
-  .about__blocks {
+  .promo__blocks {
     flex-wrap: wrap;
   }
 
@@ -331,10 +382,26 @@ img {
     min-height: 27rem;
   }
 
+  .about__info {
+    flex-basis: calc(50% - 0.75rem);
+  }
+
+  .thankyou__info {
+    flex-basis: calc(50% - 0.75rem);
+  }
+
+  .reserving__info {
+    flex-basis: calc(50% - 0.75rem);
+  }
+
   .block__items,
   .block__folowing,
   .conditions {
     margin-top: 4.5rem;
+  }
+
+  .conditions__image {
+    width: min(100%, 46rem);
   }
 
   .footer {
@@ -371,7 +438,7 @@ img {
     padding: 1.25rem 1.5rem 0;
   }
 
-  .about__blocks {
+  .promo__blocks {
     flex-direction: column;
   }
 
@@ -393,12 +460,37 @@ img {
     align-items: flex-start;
   }
 
+  .about__blocks {
+    gap: 1.25rem;
+  }
+
+  .thankyou__blocks {
+    gap: 1.25rem;
+  }
+
+  .reserving__blocks {
+    gap: 1.25rem;
+  }
+
+  .about__info,
+  .thankyou__info,
+  .reserving__info {
+    flex-basis: calc(50% - 0.625rem);
+    padding: 1.5rem;
+  }
+
   .conditions {
     gap: 1.25rem;
   }
 
   .conditions__image {
-    width: min(100%, 26rem);
+    width: min(100%, 36rem);
+    gap: 1rem;
+  }
+
+  .conditions__img {
+    flex-basis: calc(50% - 0.5rem);
+    width: calc(50% - 0.5rem);
   }
 
   .footer {
@@ -470,12 +562,31 @@ img {
     margin-top: 3.5rem;
   }
 
+  .about__blocks {
+    gap: 1rem;
+  }
+
+  .thankyou__blocks {
+    gap: 1rem;
+  }
+
+  .reserving__blocks {
+    gap: 1rem;
+  }
+
   .title__block {
     margin-bottom: 1.25rem;
   }
 
   .p__items {
     font-size: 1.5rem;
+  }
+
+  .about__info,
+  .thankyou__info,
+  .reserving__info {
+    flex-basis: 100%;
+    padding: 1.25rem;
   }
 
   .products__blocks {
@@ -500,7 +611,14 @@ img {
   }
 
   .conditions__image {
-    width: min(100%, 20rem);
+    width: min(100%, 18rem);
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .conditions__img {
+    flex-basis: 100%;
+    width: 100%;
   }
 
   .footer {

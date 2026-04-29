@@ -2,7 +2,7 @@ import './../../../App.css';
 
 const ButtonClothes = () => {
   return (
-    <a href="#new" className='btn__clothes'>NEW CLOTHES</a>
+    <a href="#about" className='btn__clothes'>ABOUT US</a>
   )
 }
 
